@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<script>
+    let english = ['hi','bye','good','love','war'];
+    let Vnmese = ['chào', 'tạm biệt', 'tốt', 'yêu','chiến tranh'];
+
+    function transEnglish(){
+        let word = prompt('Nhập từ muốn tra cứu: ');
+        let index = -1;
+        for(let i = 0; i<english.length; i++){
+            if(english[i] == word){
+                index = i;
+            }
+        }
+        if (index === -1){
+            alert('Khoong Tim Thay');
+        }else{
+            alert(Vnmese[index])
+        }
+    }
+
+    function transVietnamese(){
+        let word = prompt('Find keyword: ');
+        let index = -1;
+        for(let j = 0; j < Vnmese.length; j++){
+            if(Vnmese[j] === word){
+                index = j;
+            }
+        }
+        if (index === -1){
+            alert('Khoong Tim Thay');
+        }else{
+            alert(english[index])
+        }
+    }
+    transVietnamese();
+    transEnglish();
+
+</script>
+
+</body>
+</html>
